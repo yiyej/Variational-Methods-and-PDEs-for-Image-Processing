@@ -1,2 +1,1 @@
-# Variational-Methods-and-PDEs-for-Image-Processing
-Work for the course "Variational-Methods-and-PDEs-for-Image-Processing"
+Work for the practical session of course "Variational Methods and PDEs for Image Processing", taught by Jean-François Aujol(in charge of Lecture) and Nicolas Papadakis(in charge of Practical Session), University of Bordeaux.
