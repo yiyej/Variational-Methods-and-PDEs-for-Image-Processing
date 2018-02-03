@@ -52,13 +52,3 @@ inpaint_im1=Inpainting_TV(Im1,mask1/255.,tao,lambda);
 inpaint_im2=Inpainting_Tichonov(Im1,mask1/255.,tao,lambda);
 imshow(inpaint_im1/255.);
 imshow(inpaint_im2/255.);
-
-
-
-
-
-
-
-
-
-
