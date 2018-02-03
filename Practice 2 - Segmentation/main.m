@@ -22,14 +22,14 @@ while(1)
     c1=sum(sum(I.*h)/sum(h(:)));
     c2=sum(sum(I.*(ones(size(h))-h)))/sum(1-h(:));
     
-   norm_epsilon=gradx(phi).^2+grady(phi).^2.+epsilon^2; %没开根号 epsilon也要平方
-   norm_epsilon=sqrt(norm_epsilon); %不是数 而是矩阵
+   norm_epsilon=gradx(phi).^2+grady(phi).^2.+epsilon^2; 
+   norm_epsilon=sqrt(norm_epsilon); 
    
    div_phi=div(gradx(phi)./norm_epsilon , grady(phi)./norm_epsilon);
-   increment=div_phi-lambda*(I-c1).^2+lambda*(I-c2).^2;%第二个是加号
+   increment=div_phi-lambda*(I-c1).^2+lambda*(I-c2).^2;
    increment=increment.*delta_eta(phi, eta);
    
-   tao=1./(2*max(abs(increment(:))));%绝对值
+   tao=1./(2*max(abs(increment(:))));
    phi=phi+tao*increment;
    h = Heavyside_eta(phi , eta);
    
@@ -41,21 +41,18 @@ while(1)
    h_old=h;
    
    n=n+1
-   if mod(n,10) ==0 %这里没写== %两次卡在这个地方了马马碧
+   if mod(n,10) ==0 
         phi=signed_distance_from_mask(phi>0);
    u=phi>0;
    imagesc(I);
    colormap gray
    hold on
    contour(u,'r','Linewidth',3);
-   drawnow; %要写才会in real time画出来
+   drawnow; 
    end
    
    
 end
-
-
-
 
 
 
