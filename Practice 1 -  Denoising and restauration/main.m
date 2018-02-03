@@ -88,21 +88,3 @@ im_data_denoised_TV = denoise_TV(im_data_noise , 0.1 , 500 , 0.01,5);
 imagesc(im_data_denoised_TV);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
